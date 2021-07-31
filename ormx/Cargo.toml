@@ -24,10 +24,11 @@ ormx-macros = { path = "../ormx-macros", version = "0.7" }
 futures = "0.3"
 
 [dependencies.sqlx]
-version = "0.5"
+git = "https://github.com/montanalow/sqlx"
+branch="montana/pg-copy"
 default-features = false
-features = ["macros"]
-
+features = ["macros", "runtime-tokio-rustls", "postgres"]
+ 
 [dev-dependencies]
 tokio = { version = "1.1", features = ["full"] }
 anyhow = "1"
